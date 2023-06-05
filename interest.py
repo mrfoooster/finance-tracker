@@ -29,5 +29,13 @@ def nominal_interest(j, m):
     return (1 + j) ** m - 1
 
 
+def seperate_interest(j, m):
+    return (j + 1) ** (1 / m) - 1
+
+
 def efective_interest(j, m):
-    return math.e ** (j * m) - 1
+    return (1 + j / m) ** m - 1
+
+
+if __name__ == "__main__":
+    print(seperate_interest(0.36,12))
